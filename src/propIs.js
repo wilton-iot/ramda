@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var is = require('./is');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry3 = require('ramda/src/internal/_curry3');
+var is = require('ramda/src/is');
 
 
 /**
@@ -25,3 +26,5 @@ var is = require('./is');
 module.exports = _curry3(function propIs(type, name, obj) {
   return is(type, obj[name]);
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-var _identity = require('./internal/_identity');
-var chain = require('./chain');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _identity = require('ramda/src/internal/_identity');
+var chain = require('ramda/src/chain');
 
 
 /**
@@ -20,3 +21,5 @@ var chain = require('./chain');
  *      R.unnest([[1, 2], [3, 4], [5, 6]]); //=> [1, 2, 3, 4, 5, 6]
  */
 module.exports = chain(_identity);
+
+return module.exports;});

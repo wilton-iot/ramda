@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 module.exports = function _containsWith(pred, x, list) {
   var idx = 0;
   var len = list.length;
@@ -10,3 +11,5 @@ module.exports = function _containsWith(pred, x, list) {
   }
   return false;
 };
+
+return module.exports;});

@@ -1,8 +1,9 @@
-var _curry2 = require('./internal/_curry2');
-var _isArray = require('./internal/_isArray');
-var _isFunction = require('./internal/_isFunction');
-var _isString = require('./internal/_isString');
-var toString = require('./toString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isArray = require('ramda/src/internal/_isArray');
+var _isFunction = require('ramda/src/internal/_isFunction');
+var _isString = require('ramda/src/internal/_isString');
+var toString = require('ramda/src/toString');
 
 
 /**
@@ -52,3 +53,5 @@ module.exports = _curry2(function concat(a, b) {
   }
   throw new TypeError(toString(a) + ' does not have a method named "concat" or "fantasy-land/concat"');
 });
+
+return module.exports;});

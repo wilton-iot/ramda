@@ -1,4 +1,5 @@
-var invoker = require('./invoker');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var invoker = require('ramda/src/invoker');
 
 
 /**
@@ -21,3 +22,5 @@ var invoker = require('./invoker');
  *      R.join('|', [1, 2, 3]);    //=> '1|2|3'
  */
 module.exports = invoker(1, 'join');
+
+return module.exports;});

@@ -1,4 +1,5 @@
-var _curry2 = require('./internal/_curry2');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
 
 
 /**
@@ -20,3 +21,5 @@ var _curry2 = require('./internal/_curry2');
  *      R.prop('x', {}); //=> undefined
  */
 module.exports = _curry2(function prop(p, obj) { return obj[p]; });
+
+return module.exports;});

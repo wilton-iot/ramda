@@ -9,3 +9,5 @@
 /dist/gh-pages/
 /tmp-test-bundle.js
 /coverage/
+/src/nbproject/private/
+/test/nbproject/private/

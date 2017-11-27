@@ -1,4 +1,5 @@
-var invoker = require('./invoker');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var invoker = require('ramda/src/invoker');
 
 
 /**
@@ -17,3 +18,5 @@ var invoker = require('./invoker');
  *      R.toUpper('abc'); //=> 'ABC'
  */
 module.exports = invoker(0, 'toUpperCase');
+
+return module.exports;});

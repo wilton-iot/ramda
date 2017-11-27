@@ -1,5 +1,6 @@
-var pipe = require('./pipe');
-var reverse = require('./reverse');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var pipe = require('ramda/src/pipe');
+var reverse = require('ramda/src/reverse');
 
 
 /**
@@ -32,3 +33,5 @@ module.exports = function compose() {
   }
   return pipe.apply(this, reverse(arguments));
 };
+
+return module.exports;});

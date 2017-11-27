@@ -1,6 +1,7 @@
-var filter = require('./filter');
-var juxt = require('./juxt');
-var reject = require('./reject');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var filter = require('ramda/src/filter');
+var juxt = require('ramda/src/juxt');
+var reject = require('ramda/src/reject');
 
 
 /**
@@ -28,3 +29,5 @@ var reject = require('./reject');
  *      // => [ { a: 'sss', foo: 'bars' }, { b: 'ttt' }  ]
  */
 module.exports = juxt([filter, reject]);
+
+return module.exports;});

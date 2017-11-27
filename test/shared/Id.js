@@ -1,7 +1,8 @@
-var concat = require('../../src/concat');
-var equals = require('../../src/equals');
-var map = require('../../src/map');
-var toString = require('../../src/toString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var concat = require('ramda/src/concat');
+var equals = require('ramda/src/equals');
+var map = require('ramda/src/map');
+var toString = require('ramda/src/toString');
 
 
 //  Id :: a -> Id a
@@ -21,3 +22,5 @@ module.exports = function Id(value) {
     value: value
   };
 };
+
+return module.exports;});

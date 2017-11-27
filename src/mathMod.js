@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var _isInteger = require('./internal/_isInteger');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isInteger = require('ramda/src/internal/_isInteger');
 
 
 /**
@@ -40,3 +41,5 @@ module.exports = _curry2(function mathMod(m, p) {
   if (!_isInteger(p) || p < 1) { return NaN; }
   return ((m % p) + p) % p;
 });
+
+return module.exports;});

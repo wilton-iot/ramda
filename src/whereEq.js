@@ -1,7 +1,8 @@
-var _curry2 = require('./internal/_curry2');
-var equals = require('./equals');
-var map = require('./map');
-var where = require('./where');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var equals = require('ramda/src/equals');
+var map = require('ramda/src/map');
+var where = require('ramda/src/where');
 
 
 /**
@@ -35,3 +36,5 @@ var where = require('./where');
 module.exports = _curry2(function whereEq(spec, testObj) {
   return where(map(equals, spec), testObj);
 });
+
+return module.exports;});

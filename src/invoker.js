@@ -1,7 +1,8 @@
-var _curry2 = require('./internal/_curry2');
-var _isFunction = require('./internal/_isFunction');
-var curryN = require('./curryN');
-var toString = require('./toString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isFunction = require('ramda/src/internal/_isFunction');
+var curryN = require('ramda/src/curryN');
+var toString = require('ramda/src/toString');
 
 
 /**
@@ -40,3 +41,5 @@ module.exports = _curry2(function invoker(arity, method) {
     throw new TypeError(toString(target) + ' does not have a method named "' + method + '"');
   });
 });
+
+return module.exports;});

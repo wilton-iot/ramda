@@ -1,4 +1,5 @@
-var reduceBy = require('./reduceBy');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var reduceBy = require('ramda/src/reduceBy');
 
 
 /**
@@ -24,3 +25,5 @@ var reduceBy = require('./reduceBy');
  *      //=> {abc: {id: 'abc', title: 'B'}, xyz: {id: 'xyz', title: 'A'}}
  */
 module.exports = reduceBy(function(acc, elem) { return elem; }, null);
+
+return module.exports;});

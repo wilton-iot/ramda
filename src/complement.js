@@ -1,5 +1,6 @@
-var lift = require('./lift');
-var not = require('./not');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var lift = require('ramda/src/lift');
+var not = require('ramda/src/not');
 
 
 /**
@@ -25,3 +26,5 @@ var not = require('./not');
  *      isNotNil(7); //=> true
  */
 module.exports = lift(not);
+
+return module.exports;});

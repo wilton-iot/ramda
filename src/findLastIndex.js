@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xfindLastIndex = require('./internal/_xfindLastIndex');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xfindLastIndex = require('ramda/src/internal/_xfindLastIndex');
 
 
 /**
@@ -35,3 +36,5 @@ module.exports = _curry2(_dispatchable([], _xfindLastIndex, function findLastInd
   }
   return -1;
 }));
+
+return module.exports;});

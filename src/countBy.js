@@ -1,4 +1,5 @@
-var reduceBy = require('./reduceBy');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var reduceBy = require('ramda/src/reduceBy');
 
 
 /**
@@ -26,3 +27,5 @@ var reduceBy = require('./reduceBy');
  *      R.countBy(R.toLower)(letters);   //=> {'a': 3, 'b': 2, 'c': 1}
  */
 module.exports = reduceBy(function(acc, elem) { return acc + 1; }, 0);
+
+return module.exports;});

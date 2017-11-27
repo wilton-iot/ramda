@@ -1,8 +1,9 @@
-var _curry2 = require('./internal/_curry2');
-var ap = require('./ap');
-var map = require('./map');
-var prepend = require('./prepend');
-var reduceRight = require('./reduceRight');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var ap = require('ramda/src/ap');
+var map = require('ramda/src/map');
+var prepend = require('ramda/src/prepend');
+var reduceRight = require('ramda/src/reduceRight');
 
 
 /**
@@ -36,3 +37,5 @@ module.exports = _curry2(function sequence(of, traversable) {
                 of([]),
                 traversable);
 });
+
+return module.exports;});

@@ -1,4 +1,5 @@
-var slice = require('./slice');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var slice = require('ramda/src/slice');
 
 
 /**
@@ -26,3 +27,5 @@ var slice = require('./slice');
  *      R.init('');     //=> ''
  */
 module.exports = slice(0, -1);
+
+return module.exports;});

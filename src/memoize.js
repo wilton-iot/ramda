@@ -1,5 +1,6 @@
-var memoizeWith = require('./memoizeWith');
-var toString = require('./toString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var memoizeWith = require('ramda/src/memoizeWith');
+var toString = require('ramda/src/toString');
 
 
 /**
@@ -32,3 +33,5 @@ var toString = require('./toString');
 module.exports = memoizeWith(function() {
   return toString(arguments);
 });
+
+return module.exports;});

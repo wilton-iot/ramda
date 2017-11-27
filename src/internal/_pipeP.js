@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 module.exports = function _pipeP(f, g) {
   return function() {
     var ctx = this;
@@ -6,3 +7,5 @@ module.exports = function _pipeP(f, g) {
     });
   };
 };
+
+return module.exports;});

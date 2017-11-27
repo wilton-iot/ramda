@@ -1,6 +1,7 @@
-var _curry1 = require('./_curry1');
-var _isArray = require('./_isArray');
-var _isString = require('./_isString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _isArray = require('ramda/src/internal/_isArray');
+var _isString = require('ramda/src/internal/_isString');
 
 
 /**
@@ -32,3 +33,5 @@ module.exports = _curry1(function isArrayLike(x) {
   }
   return false;
 });
+
+return module.exports;});

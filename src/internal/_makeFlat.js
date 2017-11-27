@@ -1,4 +1,5 @@
-var _isArrayLike = require('./_isArrayLike');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
 
 
 /**
@@ -31,3 +32,5 @@ module.exports = function _makeFlat(recursive) {
     return result;
   };
 };
+
+return module.exports;});

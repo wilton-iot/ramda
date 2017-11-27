@@ -1,4 +1,5 @@
-var _filter = require('./_filter');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _filter = require('ramda/src/internal/_filter');
 
 
 /**
@@ -11,3 +12,5 @@ module.exports = function _functionsWith(fn) {
     return _filter(function(key) { return typeof obj[key] === 'function'; }, fn(obj));
   };
 };
+
+return module.exports;});

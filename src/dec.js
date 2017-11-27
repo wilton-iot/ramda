@@ -1,4 +1,5 @@
-var add = require('./add');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var add = require('ramda/src/add');
 
 
 /**
@@ -17,3 +18,5 @@ var add = require('./add');
  *      R.dec(42); //=> 41
  */
 module.exports = add(-1);
+
+return module.exports;});

@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var jsv = require('jsverify');
 
-var R = require('..');
-var eq = require('./shared/eq');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('o', function() {
@@ -23,6 +24,7 @@ describe('o', function() {
     eq(f(10)([1, 2, 3]), [10, 20, 30]);
   });
 
+/* // slow in duktape
   describe('o properties', function() {
 
     jsv.property('composes two functions', jsv.fn(), jsv.fn(), jsv.nat, function(f, g, x) {
@@ -41,4 +43,7 @@ describe('o', function() {
       ]);
     });
   });
+*/
 });
+
+return module.exports;});

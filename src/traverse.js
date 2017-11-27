@@ -1,6 +1,7 @@
-var _curry3 = require('./internal/_curry3');
-var map = require('./map');
-var sequence = require('./sequence');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry3 = require('ramda/src/internal/_curry3');
+var map = require('ramda/src/map');
+var sequence = require('ramda/src/sequence');
 
 
 /**
@@ -34,3 +35,5 @@ module.exports = _curry3(function traverse(of, f, traversable) {
     traversable['fantasy-land/traverse'](f, of) :
     sequence(of, map(f, traversable));
 });
+
+return module.exports;});

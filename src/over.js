@@ -1,4 +1,5 @@
-var _curry3 = require('./internal/_curry3');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry3 = require('ramda/src/internal/_curry3');
 
 
 /**
@@ -37,3 +38,5 @@ module.exports = (function() {
     return lens(function(y) { return Identity(f(y)); })(x).value;
   });
 }());
+
+return module.exports;});

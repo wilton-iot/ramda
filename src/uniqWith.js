@@ -1,5 +1,6 @@
-var _containsWith = require('./internal/_containsWith');
-var _curry2 = require('./internal/_curry2');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _containsWith = require('ramda/src/internal/_containsWith');
+var _curry2 = require('ramda/src/internal/_curry2');
 
 
 /**
@@ -38,3 +39,5 @@ module.exports = _curry2(function uniqWith(pred, list) {
   }
   return result;
 });
+
+return module.exports;});

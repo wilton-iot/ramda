@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* eslint-env browser */
 /* global ramda:false */
 (function(window, document) {
@@ -35,3 +36,5 @@
   }
 
 })(window, document);
+
+return module.exports;});

@@ -1,6 +1,7 @@
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry2 = require('./internal/_curry2');
-var reduceBy = require('./reduceBy');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _checkForMethod = require('ramda/src/internal/_checkForMethod');
+var _curry2 = require('ramda/src/internal/_curry2');
+var reduceBy = require('ramda/src/reduceBy');
 
 /**
  * Splits a list into sub-lists stored in an object, based on the result of
@@ -49,3 +50,5 @@ module.exports = _curry2(_checkForMethod('groupBy', reduceBy(function(acc, item)
   acc.push(item);
   return acc;
 }, null)));
+
+return module.exports;});

@@ -1,8 +1,9 @@
-var listXf = require('./helpers/listXf');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var listXf = require('ramda/test/helpers/listXf');
 
-var R = require('..');
-var eq = require('./shared/eq');
-var _isTransformer = require('../src/internal/_isTransformer');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var _isTransformer = require('ramda/src/internal/_isTransformer');
 
 describe('chain', function() {
   var intoArray = R.into([]);
@@ -74,3 +75,5 @@ describe('chain', function() {
   });
 
 });
+
+return module.exports;});

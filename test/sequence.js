@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var S = require('sanctuary');
 
-var R = require('..');
-var Id = require('./shared/Id');
-var eq = require('./shared/eq');
+var R = require('ramda');
+var Id = require('ramda/test/shared/Id');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('sequence', function() {
@@ -17,15 +18,15 @@ describe('sequence', function() {
   });
 
   it('operates on a list of applicatives', function() {
-    eq(R.sequence(S.Maybe.of, [S.Just(3), S.Just(4), S.Just(5)]), S.Just([3, 4, 5]));
-    eq(R.sequence(S.Maybe.of, [S.Just(3), S.Nothing(), S.Just(5)]), S.Nothing());
+    eq(R.sequence(S.of(S.Maybe), [S.Just(3), S.Just(4), S.Just(5)]), S.Just([3, 4, 5]));
+    eq(R.sequence(S.of(S.Maybe), [S.Just(3), S.Nothing, S.Just(5)]), S.Nothing);
   });
 
   it('traverses left to right', function() {
-    eq(R.sequence(S.Either.of, [S.Right(1), S.Right(2)]), S.Right([1, 2]));
-    eq(R.sequence(S.Either.of, [S.Right(1), S.Left('XXX')]), S.Left('XXX'));
-    eq(R.sequence(S.Either.of, [S.Left('XXX'), S.Right(1)]), S.Left('XXX'));
-    eq(R.sequence(S.Either.of, [S.Left('XXX'), S.Left('YYY')]), S.Left('XXX'));
+    eq(R.sequence(S.of(S.Either), [S.Right(1), S.Right(2)]), S.Right([1, 2]));
+    eq(R.sequence(S.of(S.Either), [S.Right(1), S.Left('XXX')]), S.Left('XXX'));
+    eq(R.sequence(S.of(S.Either), [S.Left('XXX'), S.Right(1)]), S.Left('XXX'));
+    eq(R.sequence(S.of(S.Either), [S.Left('XXX'), S.Left('YYY')]), S.Left('XXX'));
   });
 
   it('dispatches to `sequence` method', function() {
@@ -34,3 +35,5 @@ describe('sequence', function() {
   });
 
 });
+
+return module.exports;});

@@ -1,6 +1,7 @@
-var _containsWith = require('./internal/_containsWith');
-var _curry3 = require('./internal/_curry3');
-var uniqWith = require('./uniqWith');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _containsWith = require('ramda/src/internal/_containsWith');
+var _curry3 = require('ramda/src/internal/_curry3');
+var uniqWith = require('ramda/src/uniqWith');
 
 
 /**
@@ -58,3 +59,5 @@ module.exports = _curry3(function intersectionWith(pred, list1, list2) {
   }
   return uniqWith(pred, results);
 });
+
+return module.exports;});

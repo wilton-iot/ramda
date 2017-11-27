@@ -1,6 +1,7 @@
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry1 = require('./internal/_curry1');
-var slice = require('./slice');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _checkForMethod = require('ramda/src/internal/_checkForMethod');
+var _curry1 = require('ramda/src/internal/_curry1');
+var slice = require('ramda/src/slice');
 
 
 /**
@@ -31,3 +32,5 @@ var slice = require('./slice');
  *      R.tail('');     //=> ''
  */
 module.exports = _curry1(_checkForMethod('tail', slice(1, Infinity)));
+
+return module.exports;});

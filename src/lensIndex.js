@@ -1,7 +1,8 @@
-var _curry1 = require('./internal/_curry1');
-var lens = require('./lens');
-var nth = require('./nth');
-var update = require('./update');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry1 = require('ramda/src/internal/_curry1');
+var lens = require('ramda/src/lens');
+var nth = require('ramda/src/nth');
+var update = require('ramda/src/update');
 
 
 /**
@@ -27,3 +28,5 @@ var update = require('./update');
 module.exports = _curry1(function lensIndex(n) {
   return lens(nth(n), update(n));
 });
+
+return module.exports;});

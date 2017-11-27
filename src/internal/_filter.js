@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 module.exports = function _filter(fn, list) {
   var idx = 0;
   var len = list.length;
@@ -11,3 +12,5 @@ module.exports = function _filter(fn, list) {
   }
   return result;
 };
+
+return module.exports;});

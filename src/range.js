@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var _isNumber = require('./internal/_isNumber');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isNumber = require('ramda/src/internal/_isNumber');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry2(function range(from, to) {
   }
   return result;
 });
+
+return module.exports;});

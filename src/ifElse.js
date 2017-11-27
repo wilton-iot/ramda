@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var curryN = require('./curryN');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry3 = require('ramda/src/internal/_curry3');
+var curryN = require('ramda/src/curryN');
 
 
 /**
@@ -34,3 +35,5 @@ module.exports = _curry3(function ifElse(condition, onTrue, onFalse) {
     }
   );
 });
+
+return module.exports;});

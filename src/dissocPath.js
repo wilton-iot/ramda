@@ -1,9 +1,10 @@
-var _curry2 = require('./internal/_curry2');
-var _isInteger = require('./internal/_isInteger');
-var assoc = require('./assoc');
-var dissoc = require('./dissoc');
-var remove = require('./remove');
-var update = require('./update');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isInteger = require('ramda/src/internal/_isInteger');
+var assoc = require('ramda/src/assoc');
+var dissoc = require('ramda/src/dissoc');
+var remove = require('ramda/src/remove');
+var update = require('ramda/src/update');
 
 
 /**
@@ -43,3 +44,5 @@ module.exports = _curry2(function dissocPath(path, obj) {
       }
   }
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-var _isArray = require('./_isArray');
-var _isTransformer = require('./_isTransformer');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _isArray = require('ramda/src/internal/_isArray');
+var _isTransformer = require('ramda/src/internal/_isTransformer');
 
 
 /**
@@ -39,3 +40,5 @@ module.exports = function _dispatchable(methodNames, xf, fn) {
     return fn.apply(this, arguments);
   };
 };
+
+return module.exports;});

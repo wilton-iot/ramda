@@ -1,7 +1,8 @@
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
-var flip = require('./flip');
-var reject = require('./reject');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _contains = require('ramda/src/internal/_contains');
+var _curry2 = require('ramda/src/internal/_curry2');
+var flip = require('ramda/src/flip');
+var reject = require('ramda/src/reject');
 
 
 /**
@@ -26,3 +27,5 @@ var reject = require('./reject');
 module.exports = _curry2(function(xs, list) {
   return reject(flip(_contains)(xs), list);
 });
+
+return module.exports;});

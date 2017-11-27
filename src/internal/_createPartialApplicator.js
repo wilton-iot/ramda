@@ -1,5 +1,6 @@
-var _arity = require('./_arity');
-var _curry2 = require('./_curry2');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _arity = require('ramda/src/internal/_arity');
+var _curry2 = require('ramda/src/internal/_curry2');
 
 
 module.exports = function _createPartialApplicator(concat) {
@@ -9,3 +10,5 @@ module.exports = function _createPartialApplicator(concat) {
     });
   });
 };
+
+return module.exports;});

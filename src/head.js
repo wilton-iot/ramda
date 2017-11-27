@@ -1,4 +1,5 @@
-var nth = require('./nth');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var nth = require('ramda/src/nth');
 
 
 /**
@@ -23,3 +24,5 @@ var nth = require('./nth');
  *      R.head(''); //=> ''
  */
 module.exports = nth(0);
+
+return module.exports;});

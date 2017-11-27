@@ -1,5 +1,6 @@
-var _concat = require('./internal/_concat');
-var _createPartialApplicator = require('./internal/_createPartialApplicator');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _concat = require('ramda/src/internal/_concat');
+var _createPartialApplicator = require('ramda/src/internal/_createPartialApplicator');
 
 
 /**
@@ -31,3 +32,5 @@ var _createPartialApplicator = require('./internal/_createPartialApplicator');
  * @symb R.partial(f, [a, b])(c, d) = f(a, b, c, d)
  */
 module.exports = _createPartialApplicator(_concat);
+
+return module.exports;});

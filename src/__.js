@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /**
  * A special placeholder value used to specify "gaps" within curried functions,
  * allowing partial application of any combination of arguments, regardless of
@@ -25,3 +26,5 @@
  *      greet('Alice'); //=> 'Hello, Alice!'
  */
 module.exports = {'@@functional/placeholder': true};
+
+return module.exports;});

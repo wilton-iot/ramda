@@ -1,6 +1,7 @@
-var _curry2 = require('./_curry2');
-var _reduce = require('./_reduce');
-var _xfBase = require('./_xfBase');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _reduce = require('ramda/src/internal/_reduce');
+var _xfBase = require('ramda/src/internal/_xfBase');
 
 module.exports = (function() {
   function XDropLastWhile(fn, xf) {
@@ -33,3 +34,5 @@ module.exports = (function() {
 
   return _curry2(function _xdropLastWhile(fn, xf) { return new XDropLastWhile(fn, xf); });
 }());
+
+return module.exports;});

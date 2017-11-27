@@ -1,5 +1,6 @@
-var equals = require('../../src/equals');
-var toString = require('../../src/toString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var equals = require('ramda/src/equals');
+var toString = require('ramda/src/toString');
 
 
 var sentinel = {};
@@ -58,3 +59,5 @@ Maybe.prototype.filter = function(pred) {
 Maybe.prototype.toString = function() {
   return this.isJust ? 'Just(' + toString(this.value) + ')' : 'Nothing';
 };
+
+return module.exports;});

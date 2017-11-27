@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 //  Ramda v0.24.1
 //  https://github.com/ramda/ramda
 //  (c) 2013-2017 Scott Sauyet, Michael Hurley, and David Chambers
@@ -9396,3 +9397,5 @@
   }
 
 }.call(this));
+
+return module.exports;});

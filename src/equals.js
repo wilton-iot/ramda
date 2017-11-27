@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var _equals = require('./internal/_equals');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _equals = require('ramda/src/internal/_equals');
 
 
 /**
@@ -30,3 +31,5 @@ var _equals = require('./internal/_equals');
 module.exports = _curry2(function equals(a, b) {
   return _equals(a, b, [], []);
 });
+
+return module.exports;});

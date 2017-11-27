@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 module.exports = function _map(fn, functor) {
   var idx = 0;
   var len = functor.length;
@@ -8,3 +9,5 @@ module.exports = function _map(fn, functor) {
   }
   return result;
 };
+
+return module.exports;});

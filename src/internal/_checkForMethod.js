@@ -1,4 +1,5 @@
-var _isArray = require('./_isArray');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _isArray = require('ramda/src/internal/_isArray');
 
 
 /**
@@ -23,3 +24,5 @@ module.exports = function _checkForMethod(methodname, fn) {
       obj[methodname].apply(obj, Array.prototype.slice.call(arguments, 0, length - 1));
   };
 };
+
+return module.exports;});

@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xall = require('./internal/_xall');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xall = require('ramda/src/internal/_xall');
 
 
 /**
@@ -37,3 +38,5 @@ module.exports = _curry2(_dispatchable(['all'], _xall, function all(fn, list) {
   }
   return true;
 }));
+
+return module.exports;});

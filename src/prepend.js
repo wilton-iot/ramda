@@ -1,5 +1,6 @@
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _concat = require('ramda/src/internal/_concat');
+var _curry2 = require('ramda/src/internal/_curry2');
 
 
 /**
@@ -22,3 +23,5 @@ var _curry2 = require('./internal/_curry2');
 module.exports = _curry2(function prepend(el, list) {
   return _concat([el], list);
 });
+
+return module.exports;});

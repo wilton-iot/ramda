@@ -1,5 +1,6 @@
-var add = require('./add');
-var reduce = require('./reduce');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var add = require('ramda/src/add');
+var reduce = require('ramda/src/reduce');
 
 
 /**
@@ -18,3 +19,5 @@ var reduce = require('./reduce');
  *      R.sum([2,4,6,8,100,1]); //=> 121
  */
 module.exports = reduce(add, 0);
+
+return module.exports;});

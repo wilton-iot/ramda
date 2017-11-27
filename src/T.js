@@ -1,4 +1,5 @@
-var always = require('./always');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var always = require('ramda/src/always');
 
 
 /**
@@ -17,3 +18,5 @@ var always = require('./always');
  *      R.T(); //=> true
  */
 module.exports = always(true);
+
+return module.exports;});

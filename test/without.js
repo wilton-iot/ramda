@@ -1,5 +1,6 @@
-var R = require('..');
-var eq = require('./shared/eq');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('without', function() {
@@ -29,3 +30,5 @@ describe('without', function() {
     eq(R.without([new Just([42])], [new Just([42])]).length, 0);
   });
 });
+
+return module.exports;});

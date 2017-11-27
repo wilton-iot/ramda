@@ -1,6 +1,7 @@
-var R = require('..');
-var eq = require('./shared/eq');
-var _isTransformer = require('../src/internal/_isTransformer');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var _isTransformer = require('ramda/src/internal/_isTransformer');
 
 
 describe('groupBy', function() {
@@ -61,3 +62,5 @@ describe('groupBy', function() {
   });
 
 });
+
+return module.exports;});

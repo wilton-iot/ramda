@@ -1,7 +1,8 @@
-var _arity = require('./internal/_arity');
-var _pipeP = require('./internal/_pipeP');
-var reduce = require('./reduce');
-var tail = require('./tail');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _arity = require('ramda/src/internal/_arity');
+var _pipeP = require('ramda/src/internal/_pipeP');
+var reduce = require('ramda/src/reduce');
+var tail = require('ramda/src/tail');
 
 
 /**
@@ -29,3 +30,5 @@ module.exports = function pipeP() {
   return _arity(arguments[0].length,
                 reduce(_pipeP, arguments[0], tail(arguments)));
 };
+
+return module.exports;});

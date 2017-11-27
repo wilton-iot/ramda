@@ -1,8 +1,9 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _makeFlat = require('./internal/_makeFlat');
-var _xchain = require('./internal/_xchain');
-var map = require('./map');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _makeFlat = require('ramda/src/internal/_makeFlat');
+var _xchain = require('ramda/src/internal/_xchain');
+var map = require('ramda/src/map');
 
 
 /**
@@ -33,3 +34,5 @@ module.exports = _curry2(_dispatchable(['fantasy-land/chain', 'chain'], _xchain,
   }
   return _makeFlat(false)(map(fn, monad));
 }));
+
+return module.exports;});

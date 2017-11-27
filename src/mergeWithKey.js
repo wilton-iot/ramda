@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry3 = require('ramda/src/internal/_curry3');
+var _has = require('ramda/src/internal/_has');
 
 
 /**
@@ -45,3 +46,5 @@ module.exports = _curry3(function mergeWithKey(fn, l, r) {
 
   return result;
 });
+
+return module.exports;});

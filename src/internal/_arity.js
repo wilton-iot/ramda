@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 module.exports = function _arity(n, fn) {
   /* eslint-disable no-unused-vars */
   switch (n) {
@@ -15,3 +16,5 @@ module.exports = function _arity(n, fn) {
     default: throw new Error('First argument to _arity must be a non-negative integer no greater than ten');
   }
 };
+
+return module.exports;});

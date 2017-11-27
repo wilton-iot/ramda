@@ -1,7 +1,8 @@
-var _map = require('./internal/_map');
-var identity = require('./identity');
-var pickAll = require('./pickAll');
-var useWith = require('./useWith');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _map = require('ramda/src/internal/_map');
+var identity = require('ramda/src/identity');
+var pickAll = require('ramda/src/pickAll');
+var useWith = require('ramda/src/useWith');
 
 
 /**
@@ -24,3 +25,5 @@ var useWith = require('./useWith');
  *      R.project(['name', 'grade'], kids); //=> [{name: 'Abby', grade: 2}, {name: 'Fred', grade: 7}]
  */
 module.exports = useWith(_map, [pickAll, identity]); // passing `identity` gives correct arity
+
+return module.exports;});

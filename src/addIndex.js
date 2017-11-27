@@ -1,6 +1,7 @@
-var _concat = require('./internal/_concat');
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _concat = require('ramda/src/internal/_concat');
+var _curry1 = require('ramda/src/internal/_curry1');
+var curryN = require('ramda/src/curryN');
 
 
 /**
@@ -41,3 +42,5 @@ module.exports = _curry1(function addIndex(fn) {
     return fn.apply(this, args);
   });
 });
+
+return module.exports;});

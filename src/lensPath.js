@@ -1,7 +1,8 @@
-var _curry1 = require('./internal/_curry1');
-var assocPath = require('./assocPath');
-var lens = require('./lens');
-var path = require('./path');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry1 = require('ramda/src/internal/_curry1');
+var assocPath = require('ramda/src/assocPath');
+var lens = require('ramda/src/lens');
+var path = require('ramda/src/path');
 
 
 /**
@@ -31,3 +32,5 @@ var path = require('./path');
 module.exports = _curry1(function lensPath(p) {
   return lens(path(p), assocPath(p));
 });
+
+return module.exports;});

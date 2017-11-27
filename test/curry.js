@@ -1,7 +1,8 @@
-var R = require('..');
-var eq = require('./shared/eq');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 var jsv = require('jsverify');
-var funcN = require('./shared/funcN');
+var funcN = require('ramda/test/shared/funcN');
 
 describe('curry', function() {
   it('curries a single value', function() {
@@ -122,6 +123,7 @@ describe('curry', function() {
 
 });
 
+/* // slow in duktape
 describe('curry properties', function() {
   jsv.property('curries multiple values', funcN(4), jsv.json, jsv.json, jsv.json, jsv.json, function(f, a, b, c, d) {
     var g = R.curry(f);
@@ -148,3 +150,6 @@ describe('curry properties', function() {
     ]);
   });
 });
+*/
+
+return module.exports;});

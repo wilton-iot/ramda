@@ -1,5 +1,6 @@
-var composeK = require('./composeK');
-var reverse = require('./reverse');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var composeK = require('ramda/src/composeK');
+var reverse = require('ramda/src/reverse');
 
 /**
  * Returns the left-to-right Kleisli composition of the provided functions,
@@ -41,3 +42,5 @@ module.exports = function pipeK() {
   }
   return composeK.apply(this, reverse(arguments));
 };
+
+return module.exports;});

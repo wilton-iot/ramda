@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var mergeDeepWithKey = require('./mergeDeepWithKey');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var mergeDeepWithKey = require('ramda/src/mergeDeepWithKey');
 
 
 /**
@@ -28,3 +29,5 @@ module.exports = _curry2(function mergeDeepLeft(lObj, rObj) {
     return lVal;
   }, lObj, rObj);
 });
+
+return module.exports;});

@@ -1,8 +1,9 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert');
 var jsv = require('jsverify');
 
-var R = require('..');
-var eq = require('./shared/eq');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('compose', function() {
@@ -62,6 +63,7 @@ describe('compose', function() {
 
 describe('compose properties', function() {
 
+/* // slow in duktape
   jsv.property('composes two functions', jsv.fn(), jsv.fn(), jsv.nat, function(f, g, x) {
     return R.equals(R.compose(f, g)(x), f(g(x)));
   });
@@ -74,4 +76,7 @@ describe('compose properties', function() {
       R.compose(R.compose(f, g), h)(x)
     ]);
   });
+*/
 });
+
+return module.exports;});

@@ -1,4 +1,5 @@
-var _curry3 = require('./internal/_curry3');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry3 = require('ramda/src/internal/_curry3');
 
 
 /**
@@ -47,3 +48,5 @@ module.exports = _curry3(function mapAccum(fn, acc, list) {
   }
   return [tuple[0], result];
 });
+
+return module.exports;});

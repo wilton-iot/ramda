@@ -1,7 +1,8 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xdropRepeatsWith = require('./internal/_xdropRepeatsWith');
-var last = require('./last');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xdropRepeatsWith = require('ramda/src/internal/_xdropRepeatsWith');
+var last = require('ramda/src/last');
 
 
 /**
@@ -41,3 +42,5 @@ module.exports = _curry2(_dispatchable([], _xdropRepeatsWith, function dropRepea
   return result;
 }));
 
+
+return module.exports;});

@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var length = require('./length');
-var slice = require('./slice');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var length = require('ramda/src/length');
+var slice = require('ramda/src/slice');
 
 
 /**
@@ -24,3 +25,5 @@ var slice = require('./slice');
 module.exports = _curry2(function splitAt(index, array) {
   return [slice(0, index, array), slice(index, length(array), array)];
 });
+
+return module.exports;});

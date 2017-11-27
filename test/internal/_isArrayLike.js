@@ -1,5 +1,6 @@
-var eq = require('../shared/eq');
-var _isArrayLike = require('../../src/internal/_isArrayLike');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
 
 
 describe('isArrayLike', function() {
@@ -47,3 +48,5 @@ describe('isArrayLike', function() {
   });
 
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-var multiply = require('./multiply');
-var reduce = require('./reduce');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var multiply = require('ramda/src/multiply');
+var reduce = require('ramda/src/reduce');
 
 
 /**
@@ -18,3 +19,5 @@ var reduce = require('./reduce');
  *      R.product([2,4,6,8,100,1]); //=> 38400
  */
 module.exports = reduce(multiply, 1);
+
+return module.exports;});

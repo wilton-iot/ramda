@@ -1,4 +1,5 @@
-var _isPlaceholder = require('./_isPlaceholder');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _isPlaceholder = require('ramda/src/internal/_isPlaceholder');
 
 
 /**
@@ -18,3 +19,5 @@ module.exports = function _curry1(fn) {
     }
   };
 };
+
+return module.exports;});

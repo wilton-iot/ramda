@@ -1,8 +1,9 @@
-var _curry2 = require('./internal/_curry2');
-var _reduce = require('./internal/_reduce');
-var ap = require('./ap');
-var curryN = require('./curryN');
-var map = require('./map');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _reduce = require('ramda/src/internal/_reduce');
+var ap = require('ramda/src/ap');
+var curryN = require('ramda/src/curryN');
+var map = require('ramda/src/map');
 
 
 /**
@@ -28,3 +29,5 @@ module.exports = _curry2(function liftN(arity, fn) {
     return _reduce(ap, map(lifted, arguments[0]), Array.prototype.slice.call(arguments, 1));
   });
 });
+
+return module.exports;});

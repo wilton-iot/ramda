@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var _reduce = require('./internal/_reduce');
-var keys = require('./keys');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _reduce = require('ramda/src/internal/_reduce');
+var keys = require('ramda/src/keys');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry2(function mapObjIndexed(fn, obj) {
     return acc;
   }, {}, keys(obj));
 });
+
+return module.exports;});

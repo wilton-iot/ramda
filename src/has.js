@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var _has = require('./internal/_has');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _has = require('ramda/src/internal/_has');
 
 
 /**
@@ -27,3 +28,5 @@ var _has = require('./internal/_has');
  *      pointHas('z');  //=> false
  */
 module.exports = _curry2(_has);
+
+return module.exports;});

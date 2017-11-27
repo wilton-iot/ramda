@@ -1,6 +1,7 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert');
 var fs = require('fs');
-var R = require('..');
+var R = require('ramda');
 var dox = require('dox');
 
 // simple object to hold info about our examples
@@ -176,3 +177,5 @@ var example_wrap = wrap('R.example_test = function(){\nvar _tests = [];\n', '\nr
 describe('example tests', function() {
   R.forEachIndexed(processExample, examples);
 });
+
+return module.exports;});

@@ -1,4 +1,5 @@
-var equals = require('../equals');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var equals = require('ramda/src/equals');
 
 
 module.exports = function _indexOf(list, a, idx) {
@@ -55,3 +56,5 @@ module.exports = function _indexOf(list, a, idx) {
   }
   return -1;
 };
+
+return module.exports;});

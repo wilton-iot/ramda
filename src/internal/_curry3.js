@@ -1,6 +1,7 @@
-var _curry1 = require('./_curry1');
-var _curry2 = require('./_curry2');
-var _isPlaceholder = require('./_isPlaceholder');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isPlaceholder = require('ramda/src/internal/_isPlaceholder');
 
 
 /**
@@ -36,3 +37,5 @@ module.exports = function _curry3(fn) {
     }
   };
 };
+
+return module.exports;});

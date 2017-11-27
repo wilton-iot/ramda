@@ -1,7 +1,8 @@
-var _aperture = require('./internal/_aperture');
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xaperture = require('./internal/_xaperture');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _aperture = require('ramda/src/internal/_aperture');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xaperture = require('ramda/src/internal/_xaperture');
 
 
 /**
@@ -26,3 +27,5 @@ var _xaperture = require('./internal/_xaperture');
  *      R.aperture(7, [1, 2, 3, 4, 5]); //=> []
  */
 module.exports = _curry2(_dispatchable([], _xaperture, _aperture));
+
+return module.exports;});

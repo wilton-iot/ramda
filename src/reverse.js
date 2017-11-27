@@ -1,5 +1,6 @@
-var _curry1 = require('./internal/_curry1');
-var _isString = require('./internal/_isString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _isString = require('ramda/src/internal/_isString');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry1(function reverse(list) {
   return _isString(list) ? list.split('').reverse().join('') :
                            Array.prototype.slice.call(list, 0).reverse();
 });
+
+return module.exports;});

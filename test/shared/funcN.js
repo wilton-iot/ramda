@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var jsv = require('jsverify');
 
 var FMap = jsv._.FMap;
@@ -39,3 +40,5 @@ module.exports = function(n, arb) {
     }
   });
 };
+
+return module.exports;});

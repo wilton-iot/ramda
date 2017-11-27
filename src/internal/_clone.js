@@ -1,5 +1,6 @@
-var _cloneRegExp = require('./_cloneRegExp');
-var type = require('../type');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _cloneRegExp = require('ramda/src/internal/_cloneRegExp');
+var type = require('ramda/src/type');
 
 
 /**
@@ -38,3 +39,5 @@ module.exports = function _clone(value, refFrom, refTo, deep) {
     default:        return value;
   }
 };
+
+return module.exports;});

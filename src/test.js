@@ -1,7 +1,8 @@
-var _cloneRegExp = require('./internal/_cloneRegExp');
-var _curry2 = require('./internal/_curry2');
-var _isRegExp = require('./internal/_isRegExp');
-var toString = require('./toString');
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var _cloneRegExp = require('ramda/src/internal/_cloneRegExp');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isRegExp = require('ramda/src/internal/_isRegExp');
+var toString = require('ramda/src/toString');
 
 
 /**
@@ -27,3 +28,5 @@ module.exports = _curry2(function test(pattern, str) {
   }
   return _cloneRegExp(pattern).test(str);
 });
+
+return module.exports;});

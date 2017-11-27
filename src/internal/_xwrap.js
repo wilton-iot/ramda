@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 module.exports = (function() {
   function XWrap(fn) {
     this.f = fn;
@@ -12,3 +13,5 @@ module.exports = (function() {
 
   return function _xwrap(fn) { return new XWrap(fn); };
 }());
+
+return module.exports;});
