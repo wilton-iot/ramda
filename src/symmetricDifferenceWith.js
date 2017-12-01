@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _curry3 = require('ramda/src/internal/_curry3');
 var concat = require('ramda/src/concat');
 var differenceWith = require('ramda/src/differenceWith');
@@ -30,4 +30,4 @@ module.exports = _curry3(function symmetricDifferenceWith(pred, list1, list2) {
   return concat(differenceWith(pred, list1, list2), differenceWith(pred, list2, list1));
 });
 
-return module.exports;});
+require = requireOrig;});

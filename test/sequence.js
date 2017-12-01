@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var S = require('sanctuary');
 
 var R = require('ramda');
@@ -36,4 +36,4 @@ describe('sequence', function() {
 
 });
 
-return module.exports;});
+require = requireOrig;});

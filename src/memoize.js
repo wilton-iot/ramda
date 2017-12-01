@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var memoizeWith = require('ramda/src/memoizeWith');
 var toString = require('ramda/src/toString');
 
@@ -34,4 +34,4 @@ module.exports = memoizeWith(function() {
   return toString(arguments);
 });
 
-return module.exports;});
+require = requireOrig;});

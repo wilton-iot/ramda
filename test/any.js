@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var listXf = require('ramda/test/helpers/listXf');
 
 var R = require('ramda');
@@ -65,4 +65,4 @@ describe('any', function() {
 
 });
 
-return module.exports;});
+require = requireOrig;});

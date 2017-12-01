@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _clone = require('ramda/src/internal/_clone');
 var _curry3 = require('ramda/src/internal/_curry3');
 var _isTransformer = require('ramda/src/internal/_isTransformer');
@@ -50,4 +50,4 @@ module.exports = _curry3(function into(acc, xf, list) {
     _reduce(xf(_stepCat(acc)), _clone(acc, [], [], false), list);
 });
 
-return module.exports;});
+require = requireOrig;});

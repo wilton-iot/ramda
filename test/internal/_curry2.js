@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 var _ = require('ramda/src/__');
 var _curry2 = require('ramda/src/internal/_curry2');
@@ -22,4 +22,4 @@ describe('_curry2', function() {
   });
 });
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = {
   F: require('ramda/src/F'),
   T: require('ramda/src/T'),
@@ -248,4 +248,4 @@ module.exports = {
   zipWith: require('ramda/src/zipWith')
 };
 
-return module.exports;});
+require = requireOrig;});

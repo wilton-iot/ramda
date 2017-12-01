@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var invoker = require('ramda/src/invoker');
 
 
@@ -19,4 +19,4 @@ var invoker = require('ramda/src/invoker');
  */
 module.exports = invoker(0, 'toUpperCase');
 
-return module.exports;});
+require = requireOrig;});

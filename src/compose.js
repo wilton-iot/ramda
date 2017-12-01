@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var pipe = require('ramda/src/pipe');
 var reverse = require('ramda/src/reverse');
 
@@ -34,4 +34,4 @@ module.exports = function compose() {
   return pipe.apply(this, reverse(arguments));
 };
 
-return module.exports;});
+require = requireOrig;});

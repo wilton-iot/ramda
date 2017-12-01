@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 //  Ramda v0.24.1
 //  https://github.com/ramda/ramda
 //  (c) 2013-2017 Scott Sauyet, Michael Hurley, and David Chambers
@@ -9398,4 +9398,4 @@ define(function(){var require = WILTON_requiresync;var module = {exports: {}};va
 
 }.call(this));
 
-return module.exports;});
+require = requireOrig;});

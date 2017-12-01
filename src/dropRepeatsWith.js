@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _curry2 = require('ramda/src/internal/_curry2');
 var _dispatchable = require('ramda/src/internal/_dispatchable');
 var _xdropRepeatsWith = require('ramda/src/internal/_xdropRepeatsWith');
@@ -43,4 +43,4 @@ module.exports = _curry2(_dispatchable([], _xdropRepeatsWith, function dropRepea
 }));
 
 
-return module.exports;});
+require = requireOrig;});

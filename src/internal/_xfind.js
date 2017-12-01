@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _curry2 = require('ramda/src/internal/_curry2');
 var _reduced = require('ramda/src/internal/_reduced');
 var _xfBase = require('ramda/src/internal/_xfBase');
@@ -28,4 +28,4 @@ module.exports = (function() {
   return _curry2(function _xfind(f, xf) { return new XFind(f, xf); });
 }());
 
-return module.exports;});
+require = requireOrig;});

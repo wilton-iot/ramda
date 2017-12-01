@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var R = require('ramda');
 var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
@@ -15,4 +15,4 @@ describe('multiply', function() {
 
 });
 
-return module.exports;});
+require = requireOrig;});

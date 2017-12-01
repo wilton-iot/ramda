@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _concat = require('ramda/src/internal/_concat');
 var _createPartialApplicator = require('ramda/src/internal/_createPartialApplicator');
 
@@ -33,4 +33,4 @@ var _createPartialApplicator = require('ramda/src/internal/_createPartialApplica
  */
 module.exports = _createPartialApplicator(_concat);
 
-return module.exports;});
+require = requireOrig;});

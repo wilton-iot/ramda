@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _containsWith = require('ramda/src/internal/_containsWith');
 var _curry2 = require('ramda/src/internal/_curry2');
 
@@ -40,4 +40,4 @@ module.exports = _curry2(function uniqWith(pred, list) {
   return result;
 });
 
-return module.exports;});
+require = requireOrig;});

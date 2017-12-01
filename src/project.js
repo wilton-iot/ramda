@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _map = require('ramda/src/internal/_map');
 var identity = require('ramda/src/identity');
 var pickAll = require('ramda/src/pickAll');
@@ -26,4 +26,4 @@ var useWith = require('ramda/src/useWith');
  */
 module.exports = useWith(_map, [pickAll, identity]); // passing `identity` gives correct arity
 
-return module.exports;});
+require = requireOrig;});

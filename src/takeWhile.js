@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _curry2 = require('ramda/src/internal/_curry2');
 var _dispatchable = require('ramda/src/internal/_dispatchable');
 var _xtakeWhile = require('ramda/src/internal/_xtakeWhile');
@@ -39,4 +39,4 @@ module.exports = _curry2(_dispatchable(['takeWhile'], _xtakeWhile, function take
   return Array.prototype.slice.call(list, 0, idx);
 }));
 
-return module.exports;});
+require = requireOrig;});

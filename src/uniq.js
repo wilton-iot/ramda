@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var identity = require('ramda/src/identity');
 var uniqBy = require('ramda/src/uniqBy');
 
@@ -22,4 +22,4 @@ var uniqBy = require('ramda/src/uniqBy');
  */
 module.exports = uniqBy(identity);
 
-return module.exports;});
+require = requireOrig;});

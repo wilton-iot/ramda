@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var equals = require('ramda/src/equals');
 var toString = require('ramda/src/toString');
 
@@ -60,4 +60,4 @@ Maybe.prototype.toString = function() {
   return this.isJust ? 'Just(' + toString(this.value) + ')' : 'Nothing';
 };
 
-return module.exports;});
+require = requireOrig;});

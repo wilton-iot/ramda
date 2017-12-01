@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _contains = require('ramda/src/internal/_contains');
 var _curry2 = require('ramda/src/internal/_curry2');
 var _filter = require('ramda/src/internal/_filter');
@@ -35,4 +35,4 @@ module.exports = _curry2(function intersection(list1, list2) {
   return uniq(_filter(flip(_contains)(lookupList), filteredList));
 });
 
-return module.exports;});
+require = requireOrig;});

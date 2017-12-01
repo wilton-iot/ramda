@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var chain = require('ramda/src/chain');
 var compose = require('ramda/src/compose');
 var map = require('ramda/src/map');
@@ -43,4 +43,4 @@ module.exports = function composeK() {
   return compose(compose.apply(this, map(chain, init)), last);
 };
 
-return module.exports;});
+require = requireOrig;});

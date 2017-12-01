@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var reduceBy = require('ramda/src/reduceBy');
 
 
@@ -28,4 +28,4 @@ var reduceBy = require('ramda/src/reduceBy');
  */
 module.exports = reduceBy(function(acc, elem) { return acc + 1; }, 0);
 
-return module.exports;});
+require = requireOrig;});

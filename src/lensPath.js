@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _curry1 = require('ramda/src/internal/_curry1');
 var assocPath = require('ramda/src/assocPath');
 var lens = require('ramda/src/lens');
@@ -33,4 +33,4 @@ module.exports = _curry1(function lensPath(p) {
   return lens(path(p), assocPath(p));
 });
 
-return module.exports;});
+require = requireOrig;});

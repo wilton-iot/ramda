@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /**
  * Private `concat` function to merge two array-like objects.
  *
@@ -31,4 +31,4 @@ module.exports = function _concat(set1, set2) {
   return result;
 };
 
-return module.exports;});
+require = requireOrig;});

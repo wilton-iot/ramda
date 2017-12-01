@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _checkForMethod = require('ramda/src/internal/_checkForMethod');
 var _curry3 = require('ramda/src/internal/_curry3');
 
@@ -31,4 +31,4 @@ module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIn
   return Array.prototype.slice.call(list, fromIndex, toIndex);
 }));
 
-return module.exports;});
+require = requireOrig;});

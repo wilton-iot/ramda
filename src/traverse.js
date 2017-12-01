@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _curry3 = require('ramda/src/internal/_curry3');
 var map = require('ramda/src/map');
 var sequence = require('ramda/src/sequence');
@@ -36,4 +36,4 @@ module.exports = _curry3(function traverse(of, f, traversable) {
     sequence(of, map(f, traversable));
 });
 
-return module.exports;});
+require = requireOrig;});

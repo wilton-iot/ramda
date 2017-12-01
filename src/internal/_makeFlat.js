@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _isArrayLike = require('ramda/src/internal/_isArrayLike');
 
 
@@ -33,4 +33,4 @@ module.exports = function _makeFlat(recursive) {
   };
 };
 
-return module.exports;});
+require = requireOrig;});

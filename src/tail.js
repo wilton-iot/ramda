@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _checkForMethod = require('ramda/src/internal/_checkForMethod');
 var _curry1 = require('ramda/src/internal/_curry1');
 var slice = require('ramda/src/slice');
@@ -33,4 +33,4 @@ var slice = require('ramda/src/slice');
  */
 module.exports = _curry1(_checkForMethod('tail', slice(1, Infinity)));
 
-return module.exports;});
+require = requireOrig;});

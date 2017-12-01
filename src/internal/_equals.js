@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _arrayFromIterator = require('ramda/src/internal/_arrayFromIterator');
 var _functionName = require('ramda/src/internal/_functionName');
 var _has = require('ramda/src/internal/_has');
@@ -114,4 +114,4 @@ module.exports = function _equals(a, b, stackA, stackB) {
   return true;
 };
 
-return module.exports;});
+require = requireOrig;});

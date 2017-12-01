@@ -1,8 +1,8 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = {
   '@@transducer/init': function() { return []; },
   '@@transducer/step': function(acc, x) { return acc.concat([x]); },
   '@@transducer/result': function(x) { return x; }
 };
 
-return module.exports;});
+require = requireOrig;});

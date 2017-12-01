@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var _complement = require('ramda/src/internal/_complement');
 var _curry2 = require('ramda/src/internal/_curry2');
 var filter = require('ramda/src/filter');
@@ -32,4 +32,4 @@ module.exports = _curry2(function reject(pred, filterable) {
   return filter(_complement(pred), filterable);
 });
 
-return module.exports;});
+require = requireOrig;});
