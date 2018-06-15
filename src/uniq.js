@@ -1,5 +1,6 @@
-var identity = require('./identity');
-var uniqBy = require('./uniqBy');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var identity = require('ramda/src/identity');
+var uniqBy = require('ramda/src/uniqBy');
 
 
 /**
@@ -20,3 +21,5 @@ var uniqBy = require('./uniqBy');
  *      R.uniq([[42], [42]]); //=> [[42]]
  */
 module.exports = uniqBy(identity);
+
+require = requireOrig;});

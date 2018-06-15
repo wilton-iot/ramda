@@ -1,4 +1,5 @@
-var nth = require('./nth');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var nth = require('ramda/src/nth');
 
 
 /**
@@ -22,3 +23,5 @@ var nth = require('./nth');
  *      R.last(''); //=> ''
  */
 module.exports = nth(-1);
+
+require = requireOrig;});

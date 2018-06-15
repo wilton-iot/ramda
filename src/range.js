@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var _isNumber = require('./internal/_isNumber');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isNumber = require('ramda/src/internal/_isNumber');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry2(function range(from, to) {
   }
   return result;
 });
+
+require = requireOrig;});

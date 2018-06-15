@@ -1,7 +1,8 @@
-var _forceReduced = require('./_forceReduced');
-var _isArrayLike = require('./_isArrayLike');
-var _reduce = require('./_reduce');
-var _xfBase = require('./_xfBase');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _forceReduced = require('ramda/src/internal/_forceReduced');
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
+var _reduce = require('ramda/src/internal/_reduce');
+var _xfBase = require('ramda/src/internal/_xfBase');
 
 module.exports = (function() {
   var preservingReduced = function(xf) {
@@ -30,3 +31,5 @@ module.exports = (function() {
     };
   };
 }());
+
+require = requireOrig;});

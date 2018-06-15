@@ -1,9 +1,10 @@
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
-var _isArray = require('./internal/_isArray');
-var _isInteger = require('./internal/_isInteger');
-var assoc = require('./assoc');
-var isNil = require('./isNil');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var _has = require('ramda/src/internal/_has');
+var _isArray = require('ramda/src/internal/_isArray');
+var _isInteger = require('ramda/src/internal/_isInteger');
+var assoc = require('ramda/src/assoc');
+var isNil = require('ramda/src/isNil');
 
 
 /**
@@ -47,3 +48,5 @@ module.exports = _curry3(function assocPath(path, val, obj) {
     return assoc(idx, val, obj);
   }
 });
+
+require = requireOrig;});

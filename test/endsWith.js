@@ -1,5 +1,6 @@
-var R = require('..');
-var eq = require('./shared/eq');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 describe('startsWith', function() {
   it('should return true when a string ends with the provided value', function() {
@@ -34,3 +35,5 @@ describe('startsWith', function() {
     eq(R.endsWith(['a', 'b'], ['a', 'b', 'c']), false);
   });
 });
+
+require = requireOrig;});

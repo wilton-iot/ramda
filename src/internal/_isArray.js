@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /**
  * Tests whether or not an object is an array.
  *
@@ -15,3 +16,5 @@ module.exports = Array.isArray || function _isArray(val) {
           val.length >= 0 &&
           Object.prototype.toString.call(val) === '[object Array]');
 };
+
+require = requireOrig;});

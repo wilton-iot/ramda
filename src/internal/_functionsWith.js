@@ -1,4 +1,5 @@
-var _filter = require('./_filter');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _filter = require('ramda/src/internal/_filter');
 
 
 /**
@@ -11,3 +12,5 @@ module.exports = function _functionsWith(fn) {
     return _filter(function(key) { return typeof obj[key] === 'function'; }, fn(obj));
   };
 };
+
+require = requireOrig;});

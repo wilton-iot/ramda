@@ -1,4 +1,5 @@
-var _isPlaceholder = require('./_isPlaceholder');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _isPlaceholder = require('ramda/src/internal/_isPlaceholder');
 
 
 /**
@@ -18,3 +19,5 @@ module.exports = function _curry1(fn) {
     }
   };
 };
+
+require = requireOrig;});

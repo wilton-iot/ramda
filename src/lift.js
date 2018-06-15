@@ -1,5 +1,6 @@
-var _curry1 = require('./internal/_curry1');
-var liftN = require('./liftN');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var liftN = require('ramda/src/liftN');
 
 
 /**
@@ -27,3 +28,5 @@ var liftN = require('./liftN');
 module.exports = _curry1(function lift(fn) {
   return liftN(fn.length, fn);
 });
+
+require = requireOrig;});

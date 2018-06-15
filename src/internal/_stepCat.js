@@ -1,8 +1,9 @@
-var _assign = require('./_assign');
-var _identity = require('./_identity');
-var _isArrayLike = require('./_isArrayLike');
-var _isTransformer = require('./_isTransformer');
-var objOf = require('../objOf');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _assign = require('ramda/src/internal/_assign');
+var _identity = require('ramda/src/internal/_identity');
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
+var _isTransformer = require('ramda/src/internal/_isTransformer');
+var objOf = require('ramda/src/objOf');
 
 
 module.exports = (function() {
@@ -46,3 +47,5 @@ module.exports = (function() {
     throw new Error('Cannot create transformer for ' + obj);
   };
 }());
+
+require = requireOrig;});

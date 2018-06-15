@@ -1,4 +1,5 @@
-var add = require('./add');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var add = require('ramda/src/add');
 
 
 /**
@@ -17,3 +18,5 @@ var add = require('./add');
  *      R.inc(42); //=> 43
  */
 module.exports = add(1);
+
+require = requireOrig;});

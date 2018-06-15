@@ -1,8 +1,9 @@
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
-var max = require('./max');
-var pluck = require('./pluck');
-var reduce = require('./reduce');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var curryN = require('ramda/src/curryN');
+var max = require('ramda/src/max');
+var pluck = require('ramda/src/pluck');
+var reduce = require('ramda/src/reduce');
 
 
 /**
@@ -43,3 +44,5 @@ module.exports = _curry1(function allPass(preds) {
     return true;
   });
 });
+
+require = requireOrig;});

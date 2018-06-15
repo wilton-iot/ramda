@@ -1,5 +1,6 @@
-var equals = require('../../src/equals');
-var toString = require('../../src/toString');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var equals = require('ramda').equals;
+var toString = require('ramda').toString;
 
 
 var sentinel = {};
@@ -58,3 +59,5 @@ Maybe.prototype.filter = function(pred) {
 Maybe.prototype.toString = function() {
   return this.isJust ? 'Just(' + toString(this.value) + ')' : 'Nothing';
 };
+
+require = requireOrig;});

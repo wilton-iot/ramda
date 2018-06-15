@@ -1,4 +1,5 @@
-var _curry3 = require('./internal/_curry3');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
 
 
 /**
@@ -28,3 +29,5 @@ var _curry3 = require('./internal/_curry3');
 module.exports = _curry3(function minBy(f, a, b) {
   return f(b) < f(a) ? b : a;
 });
+
+require = requireOrig;});

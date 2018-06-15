@@ -1,6 +1,7 @@
-var _curry3 = require('./internal/_curry3');
-var always = require('./always');
-var over = require('./over');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var always = require('ramda/src/always');
+var over = require('ramda/src/over');
 
 
 /**
@@ -28,3 +29,5 @@ var over = require('./over');
 module.exports = _curry3(function set(lens, v, x) {
   return over(lens, always(v), x);
 });
+
+require = requireOrig;});

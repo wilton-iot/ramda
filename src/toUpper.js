@@ -1,4 +1,5 @@
-var invoker = require('./invoker');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var invoker = require('ramda/src/invoker');
 
 
 /**
@@ -17,3 +18,5 @@ var invoker = require('./invoker');
  *      R.toUpper('abc'); //=> 'ABC'
  */
 module.exports = invoker(0, 'toUpperCase');
+
+require = requireOrig;});

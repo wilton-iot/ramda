@@ -1,5 +1,6 @@
-var eq = require('./shared/eq');
-var R = require('..');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var R = require('ramda');
 
 describe('clamp', function() {
   it('clamps to the lower bound', function() {
@@ -27,3 +28,5 @@ describe('clamp', function() {
   });
 
 });
+
+require = requireOrig;});

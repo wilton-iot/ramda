@@ -1,7 +1,8 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var S = require('sanctuary');
 
-var R = require('..');
-var eq = require('./shared/eq');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('either', function() {
@@ -42,7 +43,9 @@ describe('either', function() {
 
   it('accepts fantasy-land applicative functors', function() {
     var Just = S.Just;
-    var Nothing = S.Nothing;
+    var Nothing = function() {
+        return S.Nothing;
+    };
     eq(R.either(Just(true), Just(true)), Just(true));
     eq(R.either(Just(true), Just(false)), Just(true));
     eq(R.either(Just(false), Just(false)), Just(false));
@@ -52,3 +55,5 @@ describe('either', function() {
   });
 
 });
+
+require = requireOrig;});

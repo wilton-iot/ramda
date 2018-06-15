@@ -1,4 +1,5 @@
-var _curry3 = require('./internal/_curry3');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
 
 
 /**
@@ -37,3 +38,5 @@ module.exports = (function() {
     return lens(function(y) { return Identity(f(y)); })(x).value;
   });
 }());
+
+require = requireOrig;});

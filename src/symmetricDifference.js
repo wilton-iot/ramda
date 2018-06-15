@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var concat = require('./concat');
-var difference = require('./difference');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var concat = require('ramda/src/concat');
+var difference = require('ramda/src/difference');
 
 
 /**
@@ -24,3 +25,5 @@ var difference = require('./difference');
 module.exports = _curry2(function symmetricDifference(list1, list2) {
   return concat(difference(list1, list2), difference(list2, list1));
 });
+
+require = requireOrig;});

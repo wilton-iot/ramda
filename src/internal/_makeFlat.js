@@ -1,4 +1,5 @@
-var _isArrayLike = require('./_isArrayLike');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
 
 
 /**
@@ -31,3 +32,5 @@ module.exports = function _makeFlat(recursive) {
     return result;
   };
 };
+
+require = requireOrig;});

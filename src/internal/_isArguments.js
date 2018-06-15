@@ -1,4 +1,5 @@
-var _has = require('./_has');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _has = require('ramda/src/internal/_has');
 
 
 module.exports = (function() {
@@ -7,3 +8,5 @@ module.exports = (function() {
     function _isArguments(x) { return toString.call(x) === '[object Arguments]'; } :
     function _isArguments(x) { return _has('callee', x); };
 }());
+
+require = requireOrig;});

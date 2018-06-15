@@ -1,5 +1,6 @@
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _contains = require('ramda/src/internal/_contains');
+var _curry2 = require('ramda/src/internal/_curry2');
 
 
 /**
@@ -27,3 +28,5 @@ module.exports = _curry2(function omit(names, obj) {
   }
   return result;
 });
+
+require = requireOrig;});

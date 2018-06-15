@@ -1,6 +1,7 @@
-var chain = require('./chain');
-var compose = require('./compose');
-var map = require('./map');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var chain = require('ramda/src/chain');
+var compose = require('ramda/src/compose');
+var map = require('ramda/src/map');
 
 
 /**
@@ -41,3 +42,5 @@ module.exports = function composeK() {
   var last = init.pop();
   return compose(compose.apply(this, map(chain, init)), last);
 };
+
+require = requireOrig;});

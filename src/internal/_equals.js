@@ -1,9 +1,10 @@
-var _arrayFromIterator = require('./_arrayFromIterator');
-var _functionName = require('./_functionName');
-var _has = require('./_has');
-var identical = require('../identical');
-var keys = require('../keys');
-var type = require('../type');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _arrayFromIterator = require('ramda/src/internal/_arrayFromIterator');
+var _functionName = require('ramda/src/internal/_functionName');
+var _has = require('ramda/src/internal/_has');
+var identical = require('ramda/src/identical');
+var keys = require('ramda/src/keys');
+var type = require('ramda/src/type');
 
 
 module.exports = function _equals(a, b, stackA, stackB) {
@@ -112,3 +113,5 @@ module.exports = function _equals(a, b, stackA, stackB) {
   stackB.pop();
   return true;
 };
+
+require = requireOrig;});

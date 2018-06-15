@@ -1,7 +1,8 @@
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-var compose = require('./compose');
-var uniq = require('./uniq');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _concat = require('ramda/src/internal/_concat');
+var _curry2 = require('ramda/src/internal/_curry2');
+var compose = require('ramda/src/compose');
+var uniq = require('ramda/src/uniq');
 
 
 /**
@@ -22,3 +23,5 @@ var uniq = require('./uniq');
  *      R.union([1, 2, 3], [2, 3, 4]); //=> [1, 2, 3, 4]
  */
 module.exports = _curry2(compose(uniq, _concat));
+
+require = requireOrig;});

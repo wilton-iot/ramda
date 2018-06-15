@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = function _arrayFromIterator(iter) {
   var list = [];
   var next;
@@ -6,3 +7,5 @@ module.exports = function _arrayFromIterator(iter) {
   }
   return list;
 };
+
+require = requireOrig;});

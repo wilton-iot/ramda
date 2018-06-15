@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var mergeWithKey = require('./mergeWithKey');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var mergeWithKey = require('ramda/src/mergeWithKey');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry3(function mergeWith(fn, l, r) {
     return fn(_l, _r);
   }, l, r);
 });
+
+require = requireOrig;});

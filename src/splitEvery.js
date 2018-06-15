@@ -1,5 +1,6 @@
-var _curry2 = require('./internal/_curry2');
-var slice = require('./slice');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var slice = require('ramda/src/slice');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry2(function splitEvery(n, list) {
   }
   return result;
 });
+
+require = requireOrig;});

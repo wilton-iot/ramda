@@ -1,8 +1,9 @@
-var _curryN = require('./internal/_curryN');
-var _dispatchable = require('./internal/_dispatchable');
-var _has = require('./internal/_has');
-var _reduce = require('./internal/_reduce');
-var _xreduceBy = require('./internal/_xreduceBy');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curryN = require('ramda/src/internal/_curryN');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _has = require('ramda/src/internal/_has');
+var _reduce = require('ramda/src/internal/_reduce');
+var _xreduceBy = require('ramda/src/internal/_xreduceBy');
 
 
 /**
@@ -57,3 +58,5 @@ module.exports = _curryN(4, [], _dispatchable([], _xreduceBy,
       return acc;
     }, {}, list);
   }));
+
+require = requireOrig;});

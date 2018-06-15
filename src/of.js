@@ -1,5 +1,6 @@
-var _curry1 = require('./internal/_curry1');
-var _of = require('./internal/_of');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _of = require('ramda/src/internal/_of');
 
 
 /**
@@ -21,3 +22,5 @@ var _of = require('./internal/_of');
  *      R.of([42]); //=> [[42]]
  */
 module.exports = _curry1(_of);
+
+require = requireOrig;});

@@ -1,8 +1,9 @@
-var listXf = require('./helpers/listXf');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var listXf = require('ramda/test/helpers/listXf');
 
-var R = require('..');
-var eq = require('./shared/eq');
-var Id = require('./shared/Id');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var Id = require('ramda/test/shared/Id');
 
 describe('map', function() {
   var times2 = function(x) {return x * 2;};
@@ -75,3 +76,5 @@ describe('map', function() {
   });
 
 });
+
+require = requireOrig;});

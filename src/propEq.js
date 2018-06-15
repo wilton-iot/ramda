@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var equals = require('./equals');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var equals = require('ramda/src/equals');
 
 
 /**
@@ -29,3 +30,5 @@ var equals = require('./equals');
 module.exports = _curry3(function propEq(name, val, obj) {
   return equals(val, obj[name]);
 });
+
+require = requireOrig;});

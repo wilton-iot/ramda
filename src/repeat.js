@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var always = require('./always');
-var times = require('./times');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var always = require('ramda/src/always');
+var times = require('ramda/src/times');
 
 
 /**
@@ -29,3 +30,5 @@ var times = require('./times');
 module.exports = _curry2(function repeat(value, n) {
   return times(always(value), n);
 });
+
+require = requireOrig;});

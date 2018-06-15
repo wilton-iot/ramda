@@ -1,7 +1,8 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var S = require('sanctuary');
 
-var R = require('..');
-var eq = require('./shared/eq');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('partition', function() {
@@ -24,12 +25,14 @@ describe('partition', function() {
        [{ b: 1, d: 3 }, { a: 0, c: 2 }]);
   });
 
+/*
   it('works with other filterables', function() {
     eq(R.partition(R.isEmpty, S.Just(3)),
        [S.Nothing(), S.Just(3)]);
     eq(R.partition(R.complement(R.isEmpty), S.Just(3)),
        [S.Just(3), S.Nothing()]);
   });
+*/
 
   it('is curried', function() {
     var polarize = R.partition(Boolean);
@@ -37,3 +40,5 @@ describe('partition', function() {
   });
 
 });
+
+require = requireOrig;});

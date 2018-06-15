@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var _has = require('ramda/src/internal/_has');
 
 
 /**
@@ -31,3 +32,5 @@ var _has = require('./internal/_has');
 module.exports = _curry3(function propOr(val, p, obj) {
   return (obj != null && _has(p, obj)) ? obj[p] : val;
 });
+
+require = requireOrig;});

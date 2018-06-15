@@ -1,4 +1,5 @@
-var curry = require('./curry');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var curry = require('ramda/src/curry');
 
 
 /**
@@ -36,3 +37,5 @@ var curry = require('./curry');
 module.exports = curry(function call(fn) {
   return fn.apply(this, Array.prototype.slice.call(arguments, 1));
 });
+
+require = requireOrig;});

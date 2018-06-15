@@ -1,7 +1,8 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _dropLast = require('./internal/_dropLast');
-var _xdropLast = require('./internal/_xdropLast');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _dropLast = require('ramda/src/internal/_dropLast');
+var _xdropLast = require('ramda/src/internal/_xdropLast');
 
 
 /**
@@ -26,3 +27,5 @@ var _xdropLast = require('./internal/_xdropLast');
  *      R.dropLast(3, 'ramda');               //=> 'ra'
  */
 module.exports = _curry2(_dispatchable([], _xdropLast, _dropLast));
+
+require = requireOrig;});

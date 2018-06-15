@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var equals = require('./equals');
-var takeLast = require('./takeLast');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var equals = require('ramda/src/equals');
+var takeLast = require('ramda/src/takeLast');
 
 /**
  * Checks if a list ends with the provided values
@@ -24,3 +25,5 @@ var takeLast = require('./takeLast');
 module.exports = _curry2(function(suffix, list) {
   return equals(takeLast(suffix.length, list), suffix);
 });
+
+require = requireOrig;});

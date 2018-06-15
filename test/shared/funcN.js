@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var jsv = require('jsverify');
 
 var FMap = jsv._.FMap;
@@ -39,3 +40,5 @@ module.exports = function(n, arb) {
     }
   });
 };
+
+require = requireOrig;});

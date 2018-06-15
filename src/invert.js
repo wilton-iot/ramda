@@ -1,6 +1,7 @@
-var _curry1 = require('./internal/_curry1');
-var _has = require('./internal/_has');
-var keys = require('./keys');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _has = require('ramda/src/internal/_has');
+var keys = require('ramda/src/keys');
 
 
 /**
@@ -40,3 +41,5 @@ module.exports = _curry1(function invert(obj) {
   }
   return out;
 });
+
+require = requireOrig;});

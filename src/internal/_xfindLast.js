@@ -1,5 +1,6 @@
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _xfBase = require('ramda/src/internal/_xfBase');
 
 
 module.exports = (function() {
@@ -20,3 +21,5 @@ module.exports = (function() {
 
   return _curry2(function _xfindLast(f, xf) { return new XFindLast(f, xf); });
 }());
+
+require = requireOrig;});

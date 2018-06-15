@@ -1,8 +1,9 @@
-var _clone = require('./internal/_clone');
-var _curry3 = require('./internal/_curry3');
-var _isTransformer = require('./internal/_isTransformer');
-var _reduce = require('./internal/_reduce');
-var _stepCat = require('./internal/_stepCat');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _clone = require('ramda/src/internal/_clone');
+var _curry3 = require('ramda/src/internal/_curry3');
+var _isTransformer = require('ramda/src/internal/_isTransformer');
+var _reduce = require('ramda/src/internal/_reduce');
+var _stepCat = require('ramda/src/internal/_stepCat');
 
 
 /**
@@ -48,3 +49,5 @@ module.exports = _curry3(function into(acc, xf, list) {
     _reduce(xf(acc), acc['@@transducer/init'](), list) :
     _reduce(xf(_stepCat(acc)), _clone(acc, [], [], false), list);
 });
+
+require = requireOrig;});

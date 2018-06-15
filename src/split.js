@@ -1,4 +1,5 @@
-var invoker = require('./invoker');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var invoker = require('ramda/src/invoker');
 
 
 /**
@@ -22,3 +23,5 @@ var invoker = require('./invoker');
  *      R.split('.', 'a.b.c.xyz.d'); //=> ['a', 'b', 'c', 'xyz', 'd']
  */
 module.exports = invoker(1, 'split');
+
+require = requireOrig;});

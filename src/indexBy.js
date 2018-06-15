@@ -1,4 +1,5 @@
-var reduceBy = require('./reduceBy');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var reduceBy = require('ramda/src/reduceBy');
 
 
 /**
@@ -24,3 +25,5 @@ var reduceBy = require('./reduceBy');
  *      //=> {abc: {id: 'abc', title: 'B'}, xyz: {id: 'xyz', title: 'A'}}
  */
 module.exports = reduceBy(function(acc, elem) { return elem; }, null);
+
+require = requireOrig;});

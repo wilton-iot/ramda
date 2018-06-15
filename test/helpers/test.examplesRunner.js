@@ -1,6 +1,7 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var assert = require('assert');
 var fs = require('fs');
-var R = require('..');
+var R = require('ramda');
 var dox = require('dox');
 
 // simple object to hold info about our examples
@@ -176,3 +177,5 @@ var example_wrap = wrap('R.example_test = function(){\nvar _tests = [];\n', '\nr
 describe('example tests', function() {
   R.forEachIndexed(processExample, examples);
 });
+
+require = requireOrig;});

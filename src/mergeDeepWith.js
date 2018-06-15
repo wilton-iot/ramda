@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var mergeDeepWithKey = require('./mergeDeepWithKey');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var mergeDeepWithKey = require('ramda/src/mergeDeepWithKey');
 
 
 /**
@@ -34,3 +35,5 @@ module.exports = _curry3(function mergeDeepWith(fn, lObj, rObj) {
     return fn(lVal, rVal);
   }, lObj, rObj);
 });
+
+require = requireOrig;});

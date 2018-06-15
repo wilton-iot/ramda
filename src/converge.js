@@ -1,9 +1,10 @@
-var _curry2 = require('./internal/_curry2');
-var _map = require('./internal/_map');
-var curryN = require('./curryN');
-var max = require('./max');
-var pluck = require('./pluck');
-var reduce = require('./reduce');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _map = require('ramda/src/internal/_map');
+var curryN = require('ramda/src/curryN');
+var max = require('ramda/src/max');
+var pluck = require('ramda/src/pluck');
+var reduce = require('ramda/src/reduce');
 
 
 /**
@@ -42,3 +43,5 @@ module.exports = _curry2(function converge(after, fns) {
     }, fns));
   });
 });
+
+require = requireOrig;});

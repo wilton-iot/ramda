@@ -76,5 +76,22 @@
     "testem": "0.9.x",
     "uglify-js": "2.4.x",
     "xyz": "1.0.x"
+  },
+  "wilton": {
+    "excludes": [
+      "lib",
+      "scripts",
+      "src",
+      "test",
+      "BOOKMARKLET.md",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "index.js",
+      "runAllTests.js",
+      "testem.json"
+    ],
+    "preMinifiedFiles": [
+      "dist/ramda.js"
+    ]
   }
 }

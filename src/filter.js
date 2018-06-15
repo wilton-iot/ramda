@@ -1,10 +1,11 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _filter = require('./internal/_filter');
-var _isObject = require('./internal/_isObject');
-var _reduce = require('./internal/_reduce');
-var _xfilter = require('./internal/_xfilter');
-var keys = require('./keys');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _filter = require('ramda/src/internal/_filter');
+var _isObject = require('ramda/src/internal/_isObject');
+var _reduce = require('ramda/src/internal/_reduce');
+var _xfilter = require('ramda/src/internal/_xfilter');
+var keys = require('ramda/src/keys');
 
 
 /**
@@ -47,3 +48,5 @@ module.exports = _curry2(_dispatchable(['filter'], _xfilter, function(pred, filt
       _filter(pred, filterable)
   );
 }));
+
+require = requireOrig;});

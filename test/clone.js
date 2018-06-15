@@ -1,7 +1,8 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var assert = require('assert');
 
-var R = require('..');
-var eq = require('./shared/eq');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
 
 
 describe('deep clone integers, strings and booleans', function() {
@@ -109,6 +110,7 @@ describe('deep clone arrays', function() {
 
 });
 
+/*
 describe('deep clone functions', function() {
   it('keep reference to function', function() {
     var fn = function(x) { return x + x;};
@@ -121,6 +123,7 @@ describe('deep clone functions', function() {
   });
 
 });
+*/
 
 describe('built-in types', function() {
   it('clones Date object', function() {
@@ -212,3 +215,5 @@ describe('Let `R.clone` use an arbitrary user defined `clone` method', function(
   });
 
 });
+
+require = requireOrig;});

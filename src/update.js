@@ -1,6 +1,7 @@
-var _curry3 = require('./internal/_curry3');
-var adjust = require('./adjust');
-var always = require('./always');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var adjust = require('ramda/src/adjust');
+var always = require('ramda/src/always');
 
 
 /**
@@ -28,3 +29,5 @@ var always = require('./always');
 module.exports = _curry3(function update(idx, x, list) {
   return adjust(always(x), idx, list);
 });
+
+require = requireOrig;});

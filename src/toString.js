@@ -1,5 +1,6 @@
-var _curry1 = require('./internal/_curry1');
-var _toString = require('./internal/_toString');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _toString = require('ramda/src/internal/_toString');
 
 
 /**
@@ -39,3 +40,5 @@ var _toString = require('./internal/_toString');
  *      R.toString(new Date('2001-02-03T04:05:06Z')); //=> 'new Date("2001-02-03T04:05:06.000Z")'
  */
 module.exports = _curry1(function toString(val) { return _toString(val, []); });
+
+require = requireOrig;});

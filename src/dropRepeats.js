@@ -1,8 +1,9 @@
-var _curry1 = require('./internal/_curry1');
-var _dispatchable = require('./internal/_dispatchable');
-var _xdropRepeatsWith = require('./internal/_xdropRepeatsWith');
-var dropRepeatsWith = require('./dropRepeatsWith');
-var equals = require('./equals');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xdropRepeatsWith = require('ramda/src/internal/_xdropRepeatsWith');
+var dropRepeatsWith = require('ramda/src/dropRepeatsWith');
+var equals = require('ramda/src/equals');
 
 
 /**
@@ -24,3 +25,5 @@ var equals = require('./equals');
  *     R.dropRepeats([1, 1, 1, 2, 3, 4, 4, 2, 2]); //=> [1, 2, 3, 4, 2]
  */
 module.exports = _curry1(_dispatchable([], _xdropRepeatsWith(equals), dropRepeatsWith(equals)));
+
+require = requireOrig;});

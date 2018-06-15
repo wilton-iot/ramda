@@ -1,5 +1,6 @@
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
+var _has = require('ramda/src/internal/_has');
 
 
 /**
@@ -45,3 +46,5 @@ module.exports = _curry3(function mergeWithKey(fn, l, r) {
 
   return result;
 });
+
+require = requireOrig;});

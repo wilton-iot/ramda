@@ -1,5 +1,6 @@
-var pipe = require('./pipe');
-var reverse = require('./reverse');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var pipe = require('ramda/src/pipe');
+var reverse = require('ramda/src/reverse');
 
 
 /**
@@ -32,3 +33,5 @@ module.exports = function compose() {
   }
   return pipe.apply(this, reverse(arguments));
 };
+
+require = requireOrig;});

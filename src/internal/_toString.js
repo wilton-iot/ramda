@@ -1,9 +1,10 @@
-var _contains = require('./_contains');
-var _map = require('./_map');
-var _quote = require('./_quote');
-var _toISOString = require('./_toISOString');
-var keys = require('../keys');
-var reject = require('../reject');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _contains = require('ramda/src/internal/_contains');
+var _map = require('ramda/src/internal/_map');
+var _quote = require('ramda/src/internal/_quote');
+var _toISOString = require('ramda/src/internal/_toISOString');
+var keys = require('ramda/src/keys');
+var reject = require('ramda/src/reject');
 
 
 module.exports = function _toString(x, seen) {
@@ -35,7 +36,7 @@ module.exports = function _toString(x, seen) {
     case '[object Undefined]':
       return 'undefined';
     default:
-      if (typeof x.toString === 'function') {
+      if ("undefined" !== typeof (x) && null !== x && typeof x.toString === 'function') {
         var repr = x.toString();
         if (repr !== '[object Object]') {
           return repr;
@@ -44,3 +45,5 @@ module.exports = function _toString(x, seen) {
       return '{' + mapPairs(x, keys(x)).join(', ') + '}';
   }
 };
+
+require = requireOrig;});

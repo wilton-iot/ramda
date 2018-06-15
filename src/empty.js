@@ -1,8 +1,9 @@
-var _curry1 = require('./internal/_curry1');
-var _isArguments = require('./internal/_isArguments');
-var _isArray = require('./internal/_isArray');
-var _isObject = require('./internal/_isObject');
-var _isString = require('./internal/_isString');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var _isArguments = require('ramda/src/internal/_isArguments');
+var _isArray = require('ramda/src/internal/_isArray');
+var _isObject = require('ramda/src/internal/_isObject');
+var _isString = require('ramda/src/internal/_isString');
 
 
 /**
@@ -49,3 +50,5 @@ module.exports = _curry1(function empty(x) {
       void 0
   );
 });
+
+require = requireOrig;});

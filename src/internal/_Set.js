@@ -1,4 +1,5 @@
-var _contains = require('./_contains');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _contains = require('ramda/src/internal/_contains');
 
 
 // A simple Set type that honours R.equals semantics
@@ -169,3 +170,5 @@ module.exports = (function() {
   }
   return _Set;
 }());
+
+require = requireOrig;});

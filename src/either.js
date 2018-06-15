@@ -1,7 +1,8 @@
-var _curry2 = require('./internal/_curry2');
-var _isFunction = require('./internal/_isFunction');
-var lift = require('./lift');
-var or = require('./or');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _isFunction = require('ramda/src/internal/_isFunction');
+var lift = require('ramda/src/lift');
+var or = require('ramda/src/or');
 
 
 /**
@@ -38,3 +39,5 @@ module.exports = _curry2(function either(f, g) {
     } :
     lift(or)(f, g);
 });
+
+require = requireOrig;});

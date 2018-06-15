@@ -1,6 +1,7 @@
-var _concat = require('./internal/_concat');
-var _curry3 = require('./internal/_curry3');
-var uniqWith = require('./uniqWith');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _concat = require('ramda/src/internal/_concat');
+var _curry3 = require('ramda/src/internal/_curry3');
+var uniqWith = require('ramda/src/uniqWith');
 
 
 /**
@@ -28,3 +29,5 @@ var uniqWith = require('./uniqWith');
 module.exports = _curry3(function unionWith(pred, list1, list2) {
   return uniqWith(pred, _concat(list1, list2));
 });
+
+require = requireOrig;});

@@ -1,6 +1,7 @@
-var _curryN = require('./internal/_curryN');
-var _reduce = require('./internal/_reduce');
-var _reduced = require('./internal/_reduced');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curryN = require('ramda/src/internal/_curryN');
+var _reduce = require('ramda/src/internal/_reduce');
+var _reduced = require('ramda/src/internal/_reduced');
 
 
 /**
@@ -37,3 +38,5 @@ module.exports = _curryN(4, [], function _reduceWhile(pred, fn, a, list) {
     return pred(acc, x) ? fn(acc, x) : _reduced(acc);
   }, a, list);
 });
+
+require = requireOrig;});

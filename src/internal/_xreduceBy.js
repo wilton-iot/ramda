@@ -1,6 +1,7 @@
-var _curryN = require('./_curryN');
-var _has = require('./_has');
-var _xfBase = require('./_xfBase');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curryN = require('ramda/src/internal/_curryN');
+var _has = require('ramda/src/internal/_has');
+var _xfBase = require('ramda/src/internal/_xfBase');
 
 
 module.exports = (function() {
@@ -38,3 +39,5 @@ module.exports = (function() {
                    return new XReduceBy(valueFn, valueAcc, keyFn, xf);
                  });
 }());
+
+require = requireOrig;});

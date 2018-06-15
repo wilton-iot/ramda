@@ -1,6 +1,7 @@
-var eq = require('../shared/eq');
-var _ = require('../../src/__');
-var _curry3 = require('../../src/internal/_curry3');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var _ = require('ramda/src/__');
+var _curry3 = require('ramda/src/internal/_curry3');
 
 
 describe('_curry3', function() {
@@ -33,3 +34,5 @@ describe('_curry3', function() {
     eq(g(_, _, _)(1, _, _)(_, _)(2, _)(_)(3), [1, 2, 3]);
   });
 });
+
+require = requireOrig;});

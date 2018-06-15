@@ -1,4 +1,5 @@
-var _curry3 = require('./internal/_curry3');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry3 = require('ramda/src/internal/_curry3');
 
 /**
  * Restricts a number to be within a range.
@@ -28,3 +29,5 @@ module.exports = _curry3(function clamp(min, max, value) {
          value > max ? max :
          value;
 });
+
+require = requireOrig;});

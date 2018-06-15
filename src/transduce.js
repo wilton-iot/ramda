@@ -1,6 +1,7 @@
-var _reduce = require('./internal/_reduce');
-var _xwrap = require('./internal/_xwrap');
-var curryN = require('./curryN');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _reduce = require('ramda/src/internal/_reduce');
+var _xwrap = require('ramda/src/internal/_xwrap');
+var curryN = require('ramda/src/curryN');
 
 
 /**
@@ -53,3 +54,5 @@ var curryN = require('./curryN');
 module.exports = curryN(4, function transduce(xf, fn, acc, list) {
   return _reduce(xf(typeof fn === 'function' ? _xwrap(fn) : fn), acc, list);
 });
+
+require = requireOrig;});

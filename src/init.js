@@ -1,4 +1,5 @@
-var slice = require('./slice');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var slice = require('ramda/src/slice');
 
 
 /**
@@ -26,3 +27,5 @@ var slice = require('./slice');
  *      R.init('');     //=> ''
  */
 module.exports = slice(0, -1);
+
+require = requireOrig;});

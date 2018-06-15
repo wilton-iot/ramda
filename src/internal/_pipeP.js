@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = function _pipeP(f, g) {
   return function() {
     var ctx = this;
@@ -6,3 +7,5 @@ module.exports = function _pipeP(f, g) {
     });
   };
 };
+
+require = requireOrig;});

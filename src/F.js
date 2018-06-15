@@ -1,4 +1,5 @@
-var always = require('./always');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var always = require('ramda/src/always');
 
 
 /**
@@ -17,3 +18,5 @@ var always = require('./always');
  *      R.F(); //=> false
  */
 module.exports = always(false);
+
+require = requireOrig;});

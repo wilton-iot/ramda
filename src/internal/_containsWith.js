@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = function _containsWith(pred, x, list) {
   var idx = 0;
   var len = list.length;
@@ -10,3 +11,5 @@ module.exports = function _containsWith(pred, x, list) {
   }
   return false;
 };
+
+require = requireOrig;});

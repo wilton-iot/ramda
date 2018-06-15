@@ -1,6 +1,7 @@
-var _isArrayLike = require('./_isArrayLike');
-var _xwrap = require('./_xwrap');
-var bind = require('../bind');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
+var _xwrap = require('ramda/src/internal/_xwrap');
+var bind = require('ramda/src/bind');
 
 
 module.exports = (function() {
@@ -59,3 +60,5 @@ module.exports = (function() {
     throw new TypeError('reduce: list must be array or iterable');
   };
 }());
+
+require = requireOrig;});

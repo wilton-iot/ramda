@@ -1,5 +1,6 @@
-var memoizeWith = require('./memoizeWith');
-var toString = require('./toString');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var memoizeWith = require('ramda/src/memoizeWith');
+var toString = require('ramda/src/toString');
 
 
 /**
@@ -32,3 +33,5 @@ var toString = require('./toString');
 module.exports = memoizeWith(function() {
   return toString(arguments);
 });
+
+require = requireOrig;});

@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = (function() {
   function XWrap(fn) {
     this.f = fn;
@@ -12,3 +13,5 @@ module.exports = (function() {
 
   return function _xwrap(fn) { return new XWrap(fn); };
 }());
+
+require = requireOrig;});

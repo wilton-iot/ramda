@@ -1,6 +1,7 @@
-var _concat = require('./internal/_concat');
-var _createPartialApplicator = require('./internal/_createPartialApplicator');
-var flip = require('./flip');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _concat = require('ramda/src/internal/_concat');
+var _createPartialApplicator = require('ramda/src/internal/_createPartialApplicator');
+var flip = require('ramda/src/flip');
 
 
 /**
@@ -28,3 +29,5 @@ var flip = require('./flip');
  * @symb R.partialRight(f, [a, b])(c, d) = f(c, d, a, b)
  */
 module.exports = _createPartialApplicator(flip(_concat));
+
+require = requireOrig;});

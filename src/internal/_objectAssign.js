@@ -1,4 +1,5 @@
-var _has = require('./_has');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _has = require('ramda/src/internal/_has');
 
 // Based on https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 module.exports = function _objectAssign(target) {
@@ -22,3 +23,5 @@ module.exports = function _objectAssign(target) {
   }
   return output;
 };
+
+require = requireOrig;});

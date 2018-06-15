@@ -1,8 +1,9 @@
-var _complement = require('./internal/_complement');
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xany = require('./internal/_xany');
-var any = require('./any');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _complement = require('ramda/src/internal/_complement');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xany = require('ramda/src/internal/_xany');
+var any = require('ramda/src/any');
 
 
 /**
@@ -28,3 +29,5 @@ var any = require('./any');
  *      R.none(isEven, [1, 3, 5, 7, 8, 11]); //=> false
  */
 module.exports = _curry2(_complement(_dispatchable(['any'], _xany, any)));
+
+require = requireOrig;});

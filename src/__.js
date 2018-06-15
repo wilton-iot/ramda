@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 /**
  * A special placeholder value used to specify "gaps" within curried functions,
  * allowing partial application of any combination of arguments, regardless of
@@ -25,3 +26,5 @@
  *      greet('Alice'); //=> 'Hello, Alice!'
  */
 module.exports = {'@@functional/placeholder': true};
+
+require = requireOrig;});

@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 module.exports = function _aperture(n, list) {
   var idx = 0;
   var limit = list.length - (n - 1);
@@ -8,3 +9,5 @@ module.exports = function _aperture(n, list) {
   }
   return acc;
 };
+
+require = requireOrig;});

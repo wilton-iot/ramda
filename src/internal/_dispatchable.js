@@ -1,5 +1,6 @@
-var _isArray = require('./_isArray');
-var _isTransformer = require('./_isTransformer');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _isArray = require('ramda/src/internal/_isArray');
+var _isTransformer = require('ramda/src/internal/_isTransformer');
 
 
 /**
@@ -39,3 +40,5 @@ module.exports = function _dispatchable(methodNames, xf, fn) {
     return fn.apply(this, arguments);
   };
 };
+
+require = requireOrig;});

@@ -1,7 +1,8 @@
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-var _reduce = require('./internal/_reduce');
-var map = require('./map');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _concat = require('ramda/src/internal/_concat');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _reduce = require('ramda/src/internal/_reduce');
+var map = require('ramda/src/map');
 
 
 /**
@@ -37,3 +38,5 @@ module.exports = _curry2(function ap(applyF, applyX) {
       _reduce(function(acc, f) { return _concat(acc, map(f, applyX)); }, [], applyF)
   );
 });
+
+require = requireOrig;});

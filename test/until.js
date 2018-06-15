@@ -1,6 +1,7 @@
-var R = require('..');
-var eq = require('./shared/eq');
-var _isArrayLike = require('../src/internal/_isArrayLike');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var _isArrayLike = require('ramda/src/internal/_isArrayLike');
 
 
 describe('until', function() {
@@ -17,3 +18,5 @@ describe('until', function() {
   });
 
 });
+
+require = requireOrig;});

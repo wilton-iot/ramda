@@ -1,7 +1,8 @@
-var _arity = require('./internal/_arity');
-var _curry1 = require('./internal/_curry1');
-var _curry2 = require('./internal/_curry2');
-var _curryN = require('./internal/_curryN');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _arity = require('ramda/src/internal/_arity');
+var _curry1 = require('ramda/src/internal/_curry1');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _curryN = require('ramda/src/internal/_curryN');
 
 
 /**
@@ -52,3 +53,5 @@ module.exports = _curry2(function curryN(length, fn) {
   }
   return _arity(length, _curryN(length, [], fn));
 });
+
+require = requireOrig;});

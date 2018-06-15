@@ -1,6 +1,7 @@
-var _concat = require('./_concat');
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _concat = require('ramda/src/internal/_concat');
+var _curry2 = require('ramda/src/internal/_curry2');
+var _xfBase = require('ramda/src/internal/_xfBase');
 
 
 module.exports = (function() {
@@ -34,3 +35,5 @@ module.exports = (function() {
 
   return _curry2(function _xaperture(n, xf) { return new XAperture(n, xf); });
 }());
+
+require = requireOrig;});

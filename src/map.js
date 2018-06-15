@@ -1,10 +1,11 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _map = require('./internal/_map');
-var _reduce = require('./internal/_reduce');
-var _xmap = require('./internal/_xmap');
-var curryN = require('./curryN');
-var keys = require('./keys');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _map = require('ramda/src/internal/_map');
+var _reduce = require('ramda/src/internal/_reduce');
+var _xmap = require('ramda/src/internal/_xmap');
+var curryN = require('ramda/src/curryN');
+var keys = require('ramda/src/keys');
 
 
 /**
@@ -57,3 +58,5 @@ module.exports = _curry2(_dispatchable(['fantasy-land/map', 'map'], _xmap, funct
       return _map(fn, functor);
   }
 }));
+
+require = requireOrig;});

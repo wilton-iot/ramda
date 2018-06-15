@@ -1,4 +1,5 @@
-var _curry2 = require('./internal/_curry2');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
 
 
 /**
@@ -19,3 +20,5 @@ var _curry2 = require('./internal/_curry2');
  *      R.max('a', 'b'); //=> 'b'
  */
 module.exports = _curry2(function max(a, b) { return b > a ? b : a; });
+
+require = requireOrig;});

@@ -1,6 +1,7 @@
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _reduced = require('ramda/src/internal/_reduced');
+var _xfBase = require('ramda/src/internal/_xfBase');
 
 
 module.exports = (function() {
@@ -28,3 +29,5 @@ module.exports = (function() {
 
   return _curry2(function _xfindIndex(f, xf) { return new XFindIndex(f, xf); });
 }());
+
+require = requireOrig;});

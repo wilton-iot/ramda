@@ -1,6 +1,7 @@
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xfind = require('./internal/_xfind');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry2 = require('ramda/src/internal/_curry2');
+var _dispatchable = require('ramda/src/internal/_dispatchable');
+var _xfind = require('ramda/src/internal/_xfind');
 
 
 /**
@@ -37,3 +38,5 @@ module.exports = _curry2(_dispatchable(['find'], _xfind, function find(fn, list)
     idx += 1;
   }
 }));
+
+require = requireOrig;});

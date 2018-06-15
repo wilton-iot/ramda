@@ -1,4 +1,5 @@
-var _curry1 = require('./internal/_curry1');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
 
 
 /**
@@ -29,3 +30,5 @@ module.exports = _curry1(function toPairsIn(obj) {
   }
   return pairs;
 });
+
+require = requireOrig;});

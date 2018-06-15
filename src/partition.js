@@ -1,6 +1,7 @@
-var filter = require('./filter');
-var juxt = require('./juxt');
-var reject = require('./reject');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var filter = require('ramda/src/filter');
+var juxt = require('ramda/src/juxt');
+var reject = require('ramda/src/reject');
 
 
 /**
@@ -28,3 +29,5 @@ var reject = require('./reject');
  *      // => [ { a: 'sss', foo: 'bars' }, { b: 'ttt' }  ]
  */
 module.exports = juxt([filter, reject]);
+
+require = requireOrig;});

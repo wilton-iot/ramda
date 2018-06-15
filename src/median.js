@@ -1,5 +1,6 @@
-var _curry1 = require('./internal/_curry1');
-var mean = require('./mean');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _curry1 = require('ramda/src/internal/_curry1');
+var mean = require('ramda/src/mean');
 
 
 /**
@@ -30,3 +31,5 @@ module.exports = _curry1(function median(list) {
     return a < b ? -1 : a > b ? 1 : 0;
   }).slice(idx, idx + width));
 });
+
+require = requireOrig;});

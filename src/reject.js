@@ -1,6 +1,7 @@
-var _complement = require('./internal/_complement');
-var _curry2 = require('./internal/_curry2');
-var filter = require('./filter');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _complement = require('ramda/src/internal/_complement');
+var _curry2 = require('ramda/src/internal/_curry2');
+var filter = require('ramda/src/filter');
 
 
 /**
@@ -30,3 +31,5 @@ var filter = require('./filter');
 module.exports = _curry2(function reject(pred, filterable) {
   return filter(_complement(pred), filterable);
 });
+
+require = requireOrig;});

@@ -1,7 +1,8 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
-var R = require('..');
-var eq = require('./shared/eq');
-var Maybe = require('./shared/Maybe');
+var R = require('ramda');
+var eq = require('ramda/test/shared/eq');var describe = require("tape-compat").describe;var it = require("tape-compat").it;
+var Maybe = require('ramda/test/shared/Maybe');
 
 
 var add3 = R.curry(function add3(a, b, c) {
@@ -42,3 +43,5 @@ describe('lift', function() {
   });
 
 });
+
+require = requireOrig;});

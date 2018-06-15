@@ -1,5 +1,6 @@
-var _arity = require('./_arity');
-var _isPlaceholder = require('./_isPlaceholder');
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var _arity = require('ramda/src/internal/_arity');
+var _isPlaceholder = require('ramda/src/internal/_isPlaceholder');
 
 
 /**
@@ -38,3 +39,5 @@ module.exports = function _curryN(length, received, fn) {
                      : _arity(left, _curryN(length, combined, fn));
   };
 };
+
+require = requireOrig;});
